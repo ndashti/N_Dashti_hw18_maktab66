@@ -1,0 +1,29 @@
+.form-signin{
+    display: flex;
+    flex-direction: column;
+
+    // &>*{
+    //     margin-top: 20px;
+    //     margin-bottom: 20px;
+    // }
+}
+
+.form-btn{
+    background-color: #2eb396;
+    color: #e6eef9;
+    cursor: pointer;
+}
+
+a:link, a:visited{
+    font-size: .8rem;
+    color: #2eb396;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+a:hover{
+    color: #e6eef9;
+    margin: 0;
+}
+

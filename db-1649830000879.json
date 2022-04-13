@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id":1,
+      "firstname": "ali",
+      "lastname": "alavi",
+      "email": "test1@gmail.com",
+      "password": "123456",
+      "state": "یزد",
+      "city": "یزد",
+      "educatin": "لیسانس",
+      "educationPlace": "دانشگاه تهران"
+    },
+    {
+      "id":2,
+      "firstname": "reza",
+      "lastname": "rezaei",
+      "email": "test12@gmail.com",
+      "password": "2345678",
+      "state": "فارس",
+      "city": "شیراز",
+      "educatin": "لیسانس",
+      "educationPlace": "دانشگاه مشهد"
+    }
+  ]
+}

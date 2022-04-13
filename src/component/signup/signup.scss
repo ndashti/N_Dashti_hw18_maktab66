@@ -1,0 +1,32 @@
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.form-signup PasswordBox  {
+    width: 100%;
+}
+.form-btn {
+  background-color: #2eb396;
+  color: #e6eef9;
+  cursor: pointer;
+}
+
+.form-state {
+  margin: 15px;
+}
+
+
+.row{
+  display: flex;
+  & input, & select{
+    flex-grow: 1;
+  }
+}
+
+select > *{
+
+  font-size: .8rem;
+  }

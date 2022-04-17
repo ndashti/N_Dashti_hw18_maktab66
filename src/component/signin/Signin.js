@@ -2,14 +2,16 @@ import React, { useState, useContext } from "react";
 
 import axios from "axios";
 import { Formik } from "formik";
+import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 
 //context
 import { UserContext } from "../../context/ContextAuth";
 
-import PasswordBox from "../passwordBox/PasswordBox";
 import "./signin.scss";
 export default function Signin() {
   const { setUserInfo } = useContext(UserContext);
+  const [show, setShow] = useState(false);
+
   return (
     <>
       <h2>خوش آمديد</h2>
@@ -26,6 +28,11 @@ export default function Signin() {
           ) {
             errors.email = "Invalid email address";
           }
+          if (values.password.length === 0) {
+            errors.password = "کلمه عبور الزامی است";
+          }else if(values.password.length < 6){
+            errors.password="کلمه عبور باید 6 کاراکتر و بیشتر باشد";
+          }
           return errors;
         }}
         onSubmit={(values, { setSubmitting }) => {
@@ -39,7 +46,11 @@ export default function Signin() {
               );
               if (isExistUser) {
                 alert("ورود با موفقیت انجام شد.");
+                console.log(info[0].firstname)
                 setUserInfo(info[0].firstname);
+                setUserInfo(values.email)
+              }else{
+                alert("کاربر وجود ندارد")
               }
             });
         }}
@@ -67,13 +78,31 @@ export default function Signin() {
             <small className="error">
               {errors.email && touched.email && errors.email}
             </small>
-            <PasswordBox
-              name="password"
-              value={values.password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              errors={errors}
-            />
+            <div className="password-box">
+              <input
+                type={show ? "text" : "password"}
+                name="password"
+                id="password"
+                placeholder="کلمه عبور*"
+                value={values.password || ""}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                errors={errors}
+              />
+              <span className="password-box__show-icon">
+                {!show ? (
+                  <BsFillEyeFill
+                    className="show-icon"
+                    onClick={() => setShow(true)}
+                  />
+                ) : (
+                  <BsFillEyeSlashFill
+                    className="show-icon"
+                    onClick={() => setShow(false)}
+                  />
+                )}
+              </span>
+            </div>
             <small className="error">
               {errors.password && touched.password && errors.password}
             </small>

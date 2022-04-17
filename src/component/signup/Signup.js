@@ -68,15 +68,15 @@ const Signup = () => {
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
-        .max(15, "firstName Must be 15 characters or less")
-        .required("Required"),
+        .max(15, "نام باید از 15 کاراکتر کمتر باشد")
+        .required("ورود فیلد نام الزامی است"),
       lastName: Yup.string()
-        .max(20, "firstName Must be 20 characters or less")
-        .required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
-      password: Yup.string().min(6,"password Must be 6 characters or more")
-        .required("password required"),
-      city:Yup.string().required("City is Required"),
+        .max(20, "نام خانوادگی باید از 20 کاراکتر کمتر باشد")
+        .required("ورود نام خانوادگی الزامی است"),
+      email: Yup.string().email("آدرس ایمیل اشتباه است").required("وردود ایمیل الزامی است"),
+      password: Yup.string().min(6,"کلمه عبور باید 6 کاراکتر و بیشتر باشد")
+        .required("کلمه عبور الزامی است"),
+      city:Yup.string().required("انتخاب شهر الزامی است"),
       // educationPlace:Yup.string().required("educationPlace is required")
     }),
 
@@ -141,7 +141,6 @@ const Signup = () => {
         <div className="password-box">
           <input
             type={show ? "text" : "password"}
-            className="pass-box"
             name="password"
             id="password"
             value={formik.values.password || ""}

@@ -144,6 +144,36 @@
       "education": "کارشناسی ارشد",
       "educationPlace": "یزد",
       "id": "93f47fb1-ad9a-4fd0-93a3-9488cda393d1"
+    },
+    {
+      "firstName": "najme",
+      "lastName": "d",
+      "email": "nd@g.com",
+      "password": "123456",
+      "city": "بيله سوار",
+      "education": "کارشناسی ارشد",
+      "educationPlace": "dds",
+      "id": "04cec5be-fc97-4037-ac9d-42caa121c8d1"
+    },
+    {
+      "firstName": "najme",
+      "lastName": "d",
+      "email": "nd@g.com",
+      "password": "123456",
+      "city": "بيله سوار",
+      "education": "کارشناسی ارشد",
+      "educationPlace": "dds",
+      "id": "30f1b3b8-3145-4191-a32c-a3668faab6d4"
+    },
+    {
+      "firstName": "علی",
+      "lastName": "علوی",
+      "email": "ali@alavi.com",
+      "password": "123456",
+      "city": "بوكان",
+      "education": "کارشناسی ارشد",
+      "educationPlace": "qq",
+      "id": "12b6e179-684a-402a-9a2f-6064ddaaf9be"
     }
   ]
 }
